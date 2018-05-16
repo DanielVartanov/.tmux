@@ -1,1 +1,22 @@
 run-shell "~/.tmux/themes/nord-tmux/nord.tmux"
+
+set-option -g mouse off
+set-option -g repeat-time 45
+
+unbind C-b
+set-option -g prefix C-c
+bind-key C-c send-prefix
+
+set-option -g status-keys emacs
+set-option -gw mode-keys emacs
+
+unbind -t emacs-copy Escape
+bind-key -t emacs-copy C-g cancel
+
+bind-key -t emacs-copy M-v halfpage-up
+bind-key -t emacs-copy C-v halfpage-down
+
+bind-key -n C-y paste-buffer
+
+bind-key C-w kill-window
+bind-key x kill-pane
