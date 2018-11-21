@@ -4,6 +4,7 @@ set -g status-right "#{prefix_highlight}"
 
 set-option -g mouse off
 set-option -g repeat-time 45
+set-option -g history-limit 99999
 
 unbind C-b
 set-option -g prefix C-c
